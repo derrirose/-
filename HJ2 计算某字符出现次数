@@ -1,0 +1,28 @@
+#include <cstring>
+#include <iostream>
+using namespace std;
+
+int main() {
+    string a;
+    char b;
+    getline(cin,a);
+    int len = a.length();
+    int num = 0;
+    cin>>b;
+    for(int i = 0;i<len;i++)
+    {
+         if(a[i]>='A'&&a[i]<='Z'){
+            if(a[i]==b||a[i]+32==b)
+                num++;
+        }
+        else if(a[i]>='a'&&a[i]<='z'){
+            if(a[i]==b||a[i]-32==b)
+                num++;
+        }
+        else if(a[i]==b)
+            num++;
+         
+    }
+    cout<<num<<endl;
+}
+
